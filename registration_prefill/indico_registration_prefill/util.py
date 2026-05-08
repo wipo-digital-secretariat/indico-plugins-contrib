@@ -74,7 +74,8 @@ def get_previous_registration_data(regform, user, file_data=None):
     excluded_ids = [f.id for f in custom_fields]
 
     rows = (
-        db.session.query(RegistrationData, RegistrationFormItem.internal_name, RegistrationFormItem.input_type)
+        db.session
+        .query(RegistrationData, RegistrationFormItem.internal_name, RegistrationFormItem.input_type)
         .distinct(RegistrationFormItem.internal_name, RegistrationFormItem.input_type)
         .join(RegistrationData.field_data)
         .join(RegistrationFormFieldData.field)
