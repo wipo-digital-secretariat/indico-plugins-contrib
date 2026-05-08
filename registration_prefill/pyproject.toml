@@ -4,9 +4,7 @@ description = 'Indico plugin to prefill registration form fields from previous r
 readme = 'README.md'
 version = '3.3-dev'
 license = 'MIT'
-authors = [
-    { name = 'Juan Villarejo', email = 'juan.bautista@unconventional.dev' },
-]
+authors = [{ name = 'Juan Villarejo', email = 'juan.bautista@unconventional.dev' }]
 classifiers = [
     'Environment :: Plugins',
     'Environment :: Web Environment',
@@ -23,7 +21,7 @@ GitHub = 'https://github.com/indico/indico-plugins-contrib'
 registration_prefill = 'indico_registration_prefill.plugin:RegistrationPrefillPlugin'
 
 [build-system]
-requires = ['hatchling==1.27.0']
+requires = ['hatchling==1.29.0']
 build-backend = 'hatchling.build'
 
 [tool.hatch.build]
@@ -46,4 +44,4 @@ artifacts = [
 
 [tool.hatch.build.targets.sdist.hooks.custom]
 path = '../hatch_build.py'
-dependencies = ['babel==2.16.0']
+dependencies = ['babel==2.18.0']
